@@ -1,0 +1,6 @@
+framework module KMStackView {
+  umbrella header "KMStackView-umbrella.h"
+
+  export *
+  module * { export * }
+}

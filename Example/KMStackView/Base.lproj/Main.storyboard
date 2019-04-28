@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +19,80 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fc4-1d-PgC">
+                                <rect key="frame" x="259" y="511" width="100" height="36"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="MU3-0c-ZU9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="sug-SU-zWB"/>
+                                </constraints>
+                                <state key="normal" title="删除一组row">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeSomeRows:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yug-qv-2RY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mic-cN-gLC">
+                                <rect key="frame" x="259" y="455" width="100" height="36"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="KJS-gs-3qc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="jwh-8o-IBw"/>
+                                </constraints>
+                                <state key="normal" title="删除一个row">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeOneRow:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JBA-UX-Byc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnF-7T-TNk">
+                                <rect key="frame" x="16" y="511" width="100" height="36"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="8GR-U7-V69"/>
+                                    <constraint firstAttribute="height" constant="36" id="hF5-fs-b93"/>
+                                </constraints>
+                                <state key="normal" title="添加一组row">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addSomeRows:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="m4A-VH-Gz8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40P-Dp-jsx">
+                                <rect key="frame" x="16" y="455" width="100" height="36"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="添加一个row">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addOneRow:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HRp-22-FTD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="PnF-7T-TNk" secondAttribute="bottom" constant="120" id="7Ww-6g-PPO"/>
+                            <constraint firstAttribute="trailing" secondItem="Fc4-1d-PgC" secondAttribute="trailing" constant="16" id="BK7-Jg-R8y"/>
+                            <constraint firstItem="40P-Dp-jsx" firstAttribute="width" secondItem="PnF-7T-TNk" secondAttribute="width" id="FBp-fA-4aC"/>
+                            <constraint firstItem="40P-Dp-jsx" firstAttribute="centerY" secondItem="mic-cN-gLC" secondAttribute="centerY" id="MbO-VY-z3V"/>
+                            <constraint firstItem="PnF-7T-TNk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="Qsk-oz-7UO"/>
+                            <constraint firstItem="40P-Dp-jsx" firstAttribute="leading" secondItem="PnF-7T-TNk" secondAttribute="leading" id="agO-ku-12F"/>
+                            <constraint firstItem="PnF-7T-TNk" firstAttribute="top" secondItem="40P-Dp-jsx" secondAttribute="bottom" constant="20" id="d3M-b2-d84"/>
+                            <constraint firstItem="Fc4-1d-PgC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PnF-7T-TNk" secondAttribute="trailing" constant="8" symbolic="YES" id="g23-jL-oBu"/>
+                            <constraint firstItem="PnF-7T-TNk" firstAttribute="centerY" secondItem="Fc4-1d-PgC" secondAttribute="centerY" id="hcQ-hO-XNq"/>
+                            <constraint firstItem="mic-cN-gLC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="40P-Dp-jsx" secondAttribute="trailing" constant="8" symbolic="YES" id="jvu-w5-qJ8"/>
+                            <constraint firstAttribute="trailing" secondItem="mic-cN-gLC" secondAttribute="trailing" constant="16" id="zFo-Cf-mP0"/>
+                            <constraint firstItem="40P-Dp-jsx" firstAttribute="height" secondItem="PnF-7T-TNk" secondAttribute="height" id="zGo-wK-rMx"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-786" y="69"/>
         </scene>
     </scenes>
 </document>

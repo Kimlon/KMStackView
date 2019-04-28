@@ -1,0 +1,16 @@
+PODS:
+  - KMStackView (0.1.0)
+
+DEPENDENCIES:
+  - KMStackView (from `../`)
+
+EXTERNAL SOURCES:
+  KMStackView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KMStackView: 9d9d8acace7243de0e35201d06582a20ee74a977
+
+PODFILE CHECKSUM: 9edc69ec16d64499028b1ca6327ac9f6e4ab11de
+
+COCOAPODS: 1.6.1
