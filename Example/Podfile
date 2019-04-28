@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'KMStackView_Example' do
+  pod 'KMStackView', :path => '../'
+
+  target 'KMStackView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
